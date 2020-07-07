@@ -33,7 +33,7 @@
         }
     },
     "replace": {
-        "hellotypo3": "self.version",
+        "stsa/hellotypo3": "self.version",
         "typo3-ter/hellotypo3": "self.version"
     },
     "extra": {
