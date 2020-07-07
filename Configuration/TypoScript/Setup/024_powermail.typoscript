@@ -1,0 +1,95 @@
+# /* ==========================================================================
+#  * file          024_powermail.typoscript
+#  * info          Ext. powermail
+#  *
+#  *
+#  * url			hellotypo3.de
+#  * client         hellotypo3
+#  * date           18-09-14
+#  *
+#  * author         ssa :: hello@hellotypo3.de
+#  *
+#  * ========================================================================== */
+
+plugin.tx_powermail {
+    view {
+        templateRootPaths {
+            100 = EXT:hellotypo3/Resources/Private/Extensions/Powermail/Templates/
+        }
+        partialRootPaths {
+            100 = EXT:hellotypo3/Resources/Private/Extensions/Powermail/Partials/
+        }
+        layoutRootPaths {
+            100 = EXT:hellotypo3/Resources/Private/Extensions/Powermail/Layouts/
+        }
+    }
+
+    # Modify localization of labels
+    #	_LOCAL_LANG {
+    #		default {
+    #			confirmation_message = Are these values correct?
+                datepicker_format_date = Y/m/d
+                datepicker_format_time = Y/m/d H:i:s
+                datepicker_format_datetime = H:i:s
+    #		}
+    #		de {
+    #			confirmation_message = Sind diese Eingaben korrekt?
+                datepicker_format_date = d/m/Y
+                datepicker_format_time = d/m/Y H:i:s
+                datepicker_format_datetime = H:i:s
+    #		}
+    #	}
+
+    # Main settings
+    # ... wird vom typoscript main template überschrieben ... hinzugefügt ext. TS-Template constants
+    settings {
+        setup {
+            main {
+                pid = 88
+            }
+            prefill {
+                ### form 'erziehende'
+                # Fill field with marker {standort}
+                //standort = TEXT
+                //standort.stdWrap.data = GP:standort
+                // more examples see ext.powermail setup.txt
+                // https://github.com/einpraegsam/powermail/blob/develop/Documentation/ForAdministrators/BestPractice/PrefillField.md
+            }
+
+            misc {
+                htmlForHtmlFields = 0
+                htmlForLabels = 1
+            }
+
+            # Exclude values from {powermail_all} by markername or fieldtype
+            excludeFromPowermailAllMarker {
+                # On Submitpage
+                submitPage {
+                    # add some markernames (commaseparated) which should be excluded
+                    excludeFromMarkerNames = datenschutz
+
+                    # add some fieldtypes (commaseparated) which should be excluded
+                    excludeFromFieldTypes = hidden, captcha
+                }
+
+                # In Mail to receiver
+                receiverMail {
+                    # add some markernames (commaseparated) which should be excluded
+                    excludeFromMarkerNames = datenschutz
+
+                    # add some fieldtypes (commaseparated) which should be excluded
+                    excludeFromFieldTypes = hidden, captcha
+                }
+
+                # In Mail to sender (if activated)
+                senderMail {
+                    # add some markernames (commaseparated) which should be excluded
+                    excludeFromMarkerNames = datenschutz
+
+                    # add some fieldtypes (commaseparated) which should be excluded
+                    excludeFromFieldTypes = hidden, captcha
+                }
+            }
+        }
+    }
+}

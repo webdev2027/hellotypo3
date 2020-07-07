@@ -1,0 +1,173 @@
+# /* ==========================================================================
+#  * file          05_ext_news.ts
+#  * info          extension news
+#  *
+#  *
+#  * url			renosan.de
+#  * client         renosan munich/pasing
+#  * date           17-01-10
+#  *
+#  * author         ssa :: hello@_old_hellocode.de
+#  *
+#  * ========================================================================== */
+
+plugin.tx_news {
+
+    view {
+        templateRootPaths >
+        templateRootPaths {
+            100 = EXT:hellotypo3/Resources/Private/Extensions/News/Templates/
+        }
+        partialRootPaths >
+        partialRootPaths {
+            100 = EXT:hellotypo3/Resources/Private/Extensions/News/Partials/
+        }
+        layoutRootPaths >
+        layoutRootPaths {
+            100 = EXT:hellotypo3/Resources/Private/Extensions/News/Layouts/
+        }
+    }
+
+    # Modify the translation
+    _LOCAL_LANG {
+        default {
+            more-link = Read more
+            back-link = Back to list view
+            related-news = Downloads
+        }
+        de {
+            back-link = Zurück zur Listenansicht
+            more-link = Mehr Lesen
+            search-noresult = Keine Datensätze vorhanden
+            list_nonewsfound = Keine Datensätze vorhanden
+            related-news = Downloads
+        }
+        pl {
+            back-link = Powrót do listy
+            more-link = Czytaj więcej
+            search-noresult = Brak rekordów
+            list_nonewsfound = Brak rekordów
+            related-news = Pliki do pobrania
+        }
+    }
+
+    # ====================================
+    # Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+    # ====================================
+    settings {
+        cssFile = {$plugin.tx_news.settings.cssFile}
+        cssFile >
+
+        #Displays a dummy image if the news have no media items
+        displayDummyIfNoMedia = 1
+
+        # Output format
+        format = html
+
+        # general settings
+        overrideFlexformSettingsIfEmpty = cropMaxCharacters,dateField,timeRestriction,orderBy,orderDirection,backPid,listPid,startingpoint,recursive,list.paginate.itemsPerPage,list.paginate.templatePath
+        allowEmptyStringsForOverwriteDemand = 0
+
+        #includeSubCategories = 0
+
+
+        ### DETAIL PAGE
+        #defaultDetailPid = 42
+
+        dateField = datetime
+
+        link {
+            typesOpeningInNewWindow = 2
+            hrDate = 0
+            hrDate {
+                day = j
+                month = n
+                year = Y
+            }
+
+            skipControllerAndAction = 0
+        }
+
+        cropMaxCharacters = 150
+        orderBy = datetime
+        orderDirection = desc
+        topNewsFirst = 0
+        orderByAllowed = sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
+
+
+        # --------------
+        #  Detail
+        # --------------
+        detail {
+            errorHandling = pageNotFoundHandler
+            checkPidOfNewsRecord = 0
+            registerProperties = keywords,title
+            showSocialShareButtons = 1
+            disqusShortname =
+
+            # media configuration
+            media {
+                image {
+                    maxWidth = 300
+                    maxHeight =
+
+                    # Get lightbox settings from css_styled_content
+                    lightbox {
+                        enabled = {$styles.content.imgtext.linkWrap.lightboxEnabled}
+                        class = {$styles.content.imgtext.linkWrap.lightboxCssClass}
+                        width = {$styles.content.imgtext.linkWrap.width}
+                        height = {$styles.content.imgtext.linkWrap.height}
+                        rel = lightbox[myImageSet]
+                    }
+                }
+
+                video {
+                    width = 600
+                    height = 300
+                }
+            }
+        }
+
+        # --------------
+        #  List
+        # --------------
+        list {
+            # media configuration
+            media {
+                image {
+                    maxWidth = 300
+                    maxHeight = 200
+                    #width = 200c
+                    #height = 220
+                }
+
+                dummyImage = EXT:hellotypo3/Resources/Public/img/logo/logo_renosan_header.png
+            }
+
+            # Paginate configuration.
+            paginate {
+                itemsPerPage = 3
+                insertAbove = 0
+                insertBelow = 1
+                #templatePath =
+                prevNextHeaderTags = 1
+                maximumNumberOfLinks = 3
+            }
+
+        }
+
+        # --------------
+        #  Common
+        # --------------
+        relatedFiles {
+            fileSizeLabels =
+            download {
+                labelStdWrap {
+                    cObject = TEXT
+                    htmlSpecialChars = 1
+                }
+            }
+        }
+
+    }
+}

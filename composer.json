@@ -1,0 +1,44 @@
+{
+    "name": "stsa/hellotypo3",
+    "type": "typo3-cms-extension",
+    "description": "FLUID Templates & TypoScript",
+    "homepage": "https://www.hellotypo3.de/",
+    "keywords": [
+        "TYPO3",
+        "CMS",
+        "extension"
+    ],
+    "authors": [
+        {
+            "name": "StSa",
+            "email": "hello@hellotypo3.de",
+            "role": "Developer",
+            "homepage": "https://www.hellotypo3.de/"
+        }
+    ],
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4"
+    },
+    "config": {
+      "platform": {
+        "php": "7.3"
+      }
+    },
+    "autoload": {
+        "psr-4": {
+            "Stsa\\Hellotypo3\\": "Classes/"
+        }
+    },
+    "replace": {
+        "hellotypo3": "self.version",
+        "typo3-ter/hellotypo3": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "hellotypo3"
+        }
+    }
+}

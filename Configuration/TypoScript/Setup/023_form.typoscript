@@ -1,0 +1,33 @@
+# /* ==========================================================================
+#  * file          023_form.typoscript
+#  * info          Ext. form Setup
+#  *
+#  *
+#  * url			hellotypo3.de
+#  * client         hellotypo3
+#  * date           18-09-14
+#  *
+#  * author         ssa :: hello@hellotypo3.de
+#  *
+#  * ========================================================================== */
+
+### https://www.sebkln.de/en/tutorials/detail/assign-custom-templates-to-the-new-ext-form-framework/
+### https://docs.typo3.org/c/typo3/cms-form/master/en-us//I/Concepts/FrontendRendering/Index.html#templates
+### https://www.sebkln.de/tutorials/eigene-templates-im-neuen-ext-form-framework-zuweisen/
+### https://github.com/tritum/form_element_linked_checkbox/tree/master/Configuration/Yaml
+
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:hellotypo3/Configuration/Yaml/setup.form.yaml
+        }
+    }
+}
+
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:hellotypo3/Configuration/Yaml/setup.form.yaml
+        }
+    }
+}

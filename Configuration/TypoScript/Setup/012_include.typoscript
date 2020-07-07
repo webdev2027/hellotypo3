@@ -1,0 +1,39 @@
+# /* ==========================================================================
+#  * file          012_include.typoscript
+#  * info          TYPO3 includes CSS & JS
+#  *
+#  *
+#  * url			renosan.de
+#  * client         renosan munich/pasing
+#  * date           19-10-07
+#  *
+#  * author         ssa :: hello@hellocode.de
+#  *
+#  * ========================================================================== */
+page {
+    includeCSS {
+        #cssApp = {$publicPathStyleSheets}app.css
+
+        #cssPrint = {$publicPathStyleSheets}print.css
+        #cssPrint.media = print
+    }
+
+    includeJSLibs {
+        jquery    = {$publicPathExt}node_modules/jquery/dist/jquery.js
+        jquery {
+            forceOnTop = 1
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        jquery >
+    }
+
+    includeJSFooterlibs {
+        ### foundation basics
+        #foundationJs  = {$publicPathExt}node_modules/foundation-sites/dist/js/foundation.js
+    }
+
+    includeJSFooter {
+        #main       = {$publicPathJavaScript}app.js
+    }
+}

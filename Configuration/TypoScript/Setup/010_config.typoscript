@@ -1,0 +1,73 @@
+# /* ==========================================================================
+#  * file          010_config.typoscript
+#  * info          TYPO3 configuration info
+#  *
+#  *
+#  * url			renosan.de
+#  * client         renosan munich/pasing
+#  * date           19-10-07
+#  *
+#  * author         ssa :: hello@hellocode.de
+#  *
+#  * ========================================================================== */
+config {
+
+    headerComment (
+		hellocode.de _
+    )
+
+    ### doc type
+    doctype = html5
+
+    ### disable cache - only for development!
+    no_cache = 0
+
+    ### admin panel
+    admPanel = 0
+    contentObjectExceptionHandler = 0
+
+    // https://securityheaders.com & http://bit.ly/2NuMTn9
+    additionalHeaders {
+        10.header = strict-transport-security:max-age=31536000
+        20.header = X-Frame-Options:SAMEORIGIN
+        30.header = X-Xss-Protection: 1; mode=block
+        40.header = X-Content-Type-Options: nosniff
+        50.header = Referrer-Policy:strict-origin
+    }
+
+    ### Cache-Header erzeugen
+    sendCacheHeaders = 1
+
+    ### email
+    spamProtectEmailAddresses = 1
+    spamProtectEmailAddresses_atSubst = &nbsp;[at]&nbsp;
+
+    ### cache
+    ### 8 hours 28800
+    ### 1 day 86400
+    ### 1 week  604800
+    ### 4 weeks 2419200
+    cache_period = 604800
+    cache_clearAtMidnight = 0
+
+    ### comments & includes deactivate
+    disablePrefixComment = 1
+    inlineStyle2TempFile = 1
+    removeDefaultJS = external
+
+    ### baseURL
+    prefixLocalAnchors = all
+    absRefPrefix = auto
+
+    # Wieviel zeichen sollen vom Originaldateinamen verwendet werden
+    meaningfulTempFilePrefix = 50
+
+    ### MERGE / CONCATENATE
+    concatenateJs = 0
+    concatenateCss = 0
+
+    ### COMPRESS
+    compressJs = 0
+    compressCss = 0
+
+} // END CONFIG

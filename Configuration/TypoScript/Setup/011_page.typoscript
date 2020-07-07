@@ -1,0 +1,124 @@
+# /* ==========================================================================
+#  * file          011_page.typoscript
+#  * info          TYPO3 page
+#  *
+#  *
+#  * url			renosan.de
+#  * client         renosan munich/pasing
+#  * date           19-10-07
+#  *
+#  * author         ssa :: hello@hellocode.de
+#  *
+#  * ========================================================================== */
+page = PAGE
+page {
+    typeNum = 0
+
+    meta {
+        #X-UA-Compatible = IE=edge,chrome=1
+        #X-UA-Compatible.httpEquivalent = 1
+        robots = index,follow
+        viewport  = width=device-width, initial-scale=1.0
+    }
+
+    ### favicon
+    #shortcutIcon = EXT:hellotypo3/Resources/Public/img/favicons/favicon.ico
+
+
+    ### Fluid template
+    10 = FLUIDTEMPLATE
+    10{
+        layoutRootPaths {
+            0 = {$myLayoutRootPath}
+        }
+        partialRootPaths {
+            0 = {$myPartialRootPath}
+        }
+        templateRootPaths {
+            0 = {$myTemplateRootPath}
+        }
+
+        // DATA PREPROCESSING
+        dataProcessing {
+            // Main menu
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+                special = language
+                special.value = {$siteLanguages}
+                as = navLanguage
+            }
+        }
+
+
+
+        // ASSIGN TEMPLATE FILES WITH FLUID BACKEND TEMPLATE
+        file.stdWrap.cObject = CASE
+        file.stdWrap.cObject {
+
+            key.data = pagelayout
+
+            default = TEXT
+            default.value = EXT:hellotypo3/Resources/Private/Templates/Homepage.html
+
+            2 = TEXT
+            2.value = EXT:hellotypo3/Resources/Private/Templates/Subpage.html
+
+        }
+
+        variables {
+            101 < styles.content.get
+            101.select.where = colPos = 101
+
+
+            106 < styles.content.get
+            106.select.where = colPos = 106
+            #106.slide = -1
+
+            //NAV-MAIN =< lib.navMain
+        }
+    }
+
+    bodyTagCObject = COA
+    bodyTagCObject {
+        stdWrap.wrap = <body | >
+        stdWrap.case = lower
+
+        //Classes
+        10 = COA
+        10 {
+            stdWrap.noTrimWrap = | class="|" |
+
+            // Add name of the backend-layout
+            10 = TEXT
+            10 {
+                value < lib.backendLayout
+                wrap = layout-|
+                noTrimWrap = || |
+            }
+
+            // Add name of the layout
+            20 = TEXT
+            20 {
+                data = levelfield:-2, layout, slide
+                override.field = layout
+                wrap = theme-|
+                noTrimWrap = || |
+                required = 1
+            }
+
+            // Add language, https://stackoverflow.com/questions/54195804/how-to-replace-data-tsfesys-language-uid-in-typo3-9-with-aspects
+            30 = TEXT
+            30.data = siteLanguage:navigationTitle
+            30.wrap = lang-|
+            30.noTrimWrap = || |
+            30.required = 1
+
+            // Add page UID
+            40 = TEXT
+            40 {
+                field = alias // uid
+                noTrimWrap = |page-||
+            }
+        }
+    }
+} ### END PAGE

@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{navMain}">
+    <ul id="fullscreen-main-nav" class="menu vertical align-center">
+        <f:for each="{navMain}" as="navMainItem">
+            <f:render partial="Navigation/Elements/Item" arguments="{item: navMainItem}"/>
+            </li>
+        </f:for>
+    </ul>
+
+    <f:if condition="{navMeta}">
+        <hr>
+        <ul id="meta-nav" class="menu">
+            <f:for each="{navMeta}" as="navMetaItem">
+                <f:render partial="Navigation/Elements/Item" arguments="{item: navMetaItem}"/>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:if>
+
+</html>

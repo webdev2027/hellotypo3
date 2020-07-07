@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="hellotypo3" date="2015-04-27T10:11:30+02:00">
+		<header/>
+		<body>
+
+			<!-- BACKEND LAYOUTS -->
+			<trans-unit id="backend_layout.homepage.title">
+				<target>[ HELLOTYPO3 ] Homepage Template</target>
+			</trans-unit>
+			<trans-unit id="backend_layout.homepage.1">
+				<target>Content</target>
+			</trans-unit>
+
+
+
+
+
+            <!-- ########## CONSTANTS ########## -->
+            <trans-unit id="constants.siteName">
+				<target>Website Name</target>
+			</trans-unit>
+            <trans-unit id="constants.footerPid">
+				<target><![CDATA[Ordner für Info-Navigation in der Fußleiste]]></target>
+			</trans-unit>
+            <trans-unit id="constants.siteLanguages">
+				<target><![CDATA[Anzahl der Website-Sprachen, z.B. 0,1,2,3,...]]></target>
+			</trans-unit>
+
+
+
+
+
+
+            <!-- ########## ckEDITOR ########## -->
+            <trans-unit id="ckeditor.link_internal_titleText">
+				<target>Interner Link</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_internal_blank_titleText">
+				<target>Interner Link im neuen Fenster</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_external_titleText">
+				<target>Externer Link</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_external_blank_titleText">
+				<target>Externer Link im neuen Fenster</target>
+			</trans-unit>
+
+            <trans-unit id="ckeditor.link_folder_titleText">
+				<target>Link zu einem Verzeichis</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_download_titleText">
+				<target>Download-Link</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_mail_titleText">
+				<target>Mail-Link</target>
+			</trans-unit>
+
+            <trans-unit id="ckeditor.link_primarybutton_titleText">
+				<target>Button black</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_warningbutton_titleText">
+				<target>Button orange</target>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_hollowbutton_titleText">
+				<target>Button clear</target>
+			</trans-unit>
+
+
+
+
+            <!-- ########## TCEFORM ########## -->
+            <trans-unit id="tceform.header.0">
+				<target><![CDATA[Headline h2 [ blau & zentriert ]]]></target>
+			</trans-unit>
+            <trans-unit id="tceform.header.1">
+				<target><![CDATA[Headline h1 [ blau & zentriert, nur einmal pro Seite verwenden ]]]></target>
+			</trans-unit>
+            <trans-unit id="tceform.header.2">
+				<target>Headline 2</target>
+			</trans-unit>
+            <trans-unit id="tceform.header.3">
+				<target><![CDATA[Headline h3 [ blau & linksbündig ]]]></target>
+			</trans-unit>
+            <trans-unit id="tceform.header.4">
+				<target>Headline h3 weiß</target>
+			</trans-unit>
+            <trans-unit id="tceform.header.5">
+				<target>Sprungmarke für Navigation</target>
+			</trans-unit>
+            <trans-unit id="tceform.header.hidden">
+				<target>Nicht anzeigen</target>
+			</trans-unit>
+            <trans-unit id="tceform.header.6">
+				<target>Headline h6</target>
+			</trans-unit>
+
+
+
+            <trans-unit id="tceform.layout.0">
+				<target>Standard</target>
+			</trans-unit>
+            <trans-unit id="tceform.layout.1">
+				<target>Hide Headline in Anchor Menu</target>
+			</trans-unit>
+            <trans-unit id="tceform.layout.2">
+				<target>Layout 2</target>
+			</trans-unit>
+            <trans-unit id="tceform.layout.3">
+				<target>Layout 3</target>
+			</trans-unit>
+
+
+
+            <trans-unit id="tceform.frame_class.0">
+				<target>Standard</target>
+			</trans-unit>
+            <trans-unit id="tceform.frame_class.1">
+				<target>Rahmen 2</target>
+			</trans-unit>
+
+            <trans-unit id="tceform.frame_class.own1">
+				<target>Callout</target>
+			</trans-unit>
+
+
+			<trans-unit id="tceform.frame_class.default">
+				<target>Standard</target>
+			</trans-unit>
+
+			<trans-unit id="tceform.frame_class.ident">
+				<target>Weisser Hintergrund mit Innenabstand</target>
+			</trans-unit>
+			<trans-unit id="tceform.frame_class.ident-left">
+				<target>Hellblauer Hintergrund mit Innenabstand</target>
+			</trans-unit>
+			<trans-unit id="tceform.frame_class.ident-right">
+				<target>Hellgrauer Hintergrund mit Innenabstand</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

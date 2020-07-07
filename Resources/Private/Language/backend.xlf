@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="hellotypo3" date="2015-04-27T10:11:30+02:00">
+		<header/>
+		<body>
+
+            <!-- BACKEND LAYOUTS -->
+			<trans-unit id="backend_layout.homepage.title">
+				<source>[ HELLOTYPO3 ] Homepage Template</source>
+			</trans-unit>
+			<trans-unit id="backend_layout.homepage.1">
+				<source>Content</source>
+			</trans-unit>
+
+
+
+            <!-- CONSTANTS -->
+            <trans-unit id="constants.rootPage">
+				<source>Website Root Page</source>
+			</trans-unit>
+            <trans-unit id="constants.defaultDescription">
+				<source>Website Root Page</source>
+			</trans-unit>
+            <trans-unit id="constants.doNotShowInMainMenu">
+				<source>UIDs do not show in Main Menu</source>
+			</trans-unit>
+            <trans-unit id="constants.navFooter">
+				<source>Footer Navigation</source>
+			</trans-unit>
+            <trans-unit id="constants.navMeta">
+				<source>Meta Navigation</source>
+			</trans-unit>
+            <trans-unit id="constants.sitemapOne">
+				<source>Sitemap Column 1</source>
+			</trans-unit>
+            <trans-unit id="constants.sitemapTwo">
+				<source>Sitemap Column 2</source>
+			</trans-unit>
+            <trans-unit id="constants.sitemapThree">
+				<source>Sitemap Column 3</source>
+			</trans-unit>
+            <trans-unit id="constants.sitemapFour">
+				<source>Sitemap Column 4</source>
+			</trans-unit>
+            <trans-unit id="constants.sitelanguages">
+				<source>Website Languages</source>
+			</trans-unit>
+
+
+
+
+
+            <!-- ckEDITOR -->
+            <trans-unit id="ckeditor.link_internal_titleText">
+				<source>Interner Link</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_internal_blank_titleText">
+				<source>Interner Link im neuen Fenster</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_external_titleText">
+				<source>Externer Link</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_external_blank_titleText">
+				<source>Externer Link im neuen Fenster</source>
+			</trans-unit>
+
+            <trans-unit id="ckeditor.link_folder_titleText">
+				<source>Link zu einem Verzeichis</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_download_titleText">
+				<source>Download-Link</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_mail_titleText">
+				<source>Mail-Link</source>
+			</trans-unit>
+
+            <trans-unit id="ckeditor.link_primarybutton_titleText">
+				<source>Button black</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_warningbutton_titleText">
+				<source>Button orange</source>
+			</trans-unit>
+            <trans-unit id="ckeditor.link_hollowbutton_titleText">
+				<source>Button clear</source>
+			</trans-unit>
+
+
+
+
+            <!-- TCEFORM -->
+			<trans-unit id="header.0">
+				<source>H2 [ Standard-Überschrift ]</source>
+			</trans-unit>
+			<trans-unit id="header.1">
+				<source><![CDATA[H1 [ Achtung: Nur in der Spalte ÜBERSCHRIFT verwenden! ]]]></source>
+			</trans-unit>
+			<trans-unit id="header.2">
+				<source>wird nicht verwendet</source>
+			</trans-unit>
+			<trans-unit id="header.3">
+				<source>H3 [ Hauptfarbe ]</source>
+			</trans-unit>
+			<trans-unit id="header.4">
+				<source>H2 [ + horizontale Linie ]</source>
+			</trans-unit>
+			<trans-unit id="header.5">
+				<source>H3 [ + horizontale Linie ]</source>
+			</trans-unit>
+			<trans-unit id="header.6">
+				<source><![CDATA[H1 [ POTEMA H1 - Im Fließtext ]]]></source>
+			</trans-unit>
+			<trans-unit id="header.7">
+				<source><![CDATA[H4]]></source>
+			</trans-unit>
+			<trans-unit id="header.hidden">
+				<source>Verborgen [ Überschrift nicht sichtbar ]</source>
+			</trans-unit>
+
+
+
+			<!--
+            ===============
+            -> CE Layout
+            ===============
+            -->
+			<trans-unit id="layout.1">
+				<source>Kreisrunde Bilder</source>
+			</trans-unit>
+
+
+
+            <trans-unit id="tceform.frame_class.default">
+				<source>Standard</source>
+			</trans-unit>
+
+            <trans-unit id="tceform.frame_class.ident">
+				<source>Background White with Padding</source>
+			</trans-unit>
+            <trans-unit id="tceform.frame_class.ident-left">
+				<source>Background Light Blue with Padding</source>
+			</trans-unit>
+            <trans-unit id="tceform.frame_class.ident-right">
+				<source>Background Light Gray with Padding</source>
+			</trans-unit>
+
+
+			<trans-unit id="tceform.space_after_class.own1">
+				<source>Ohne Abstand nach unten</source>
+			</trans-unit>
+
+
+            <trans-unit id="imageborder.name">
+				<source>Kreisrunde Bilder aktivieren</source>
+			</trans-unit>
+
+
+
+			<!--
+            ===============
+            -> Tx_news
+            ===============
+            -->
+			<trans-unit id="tx_news.template.100">
+				<source>Aktuelle News Homepage</source>
+			</trans-unit>
+			<trans-unit id="tx_news.template.101">
+				<source>Messe und Events Homepage</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

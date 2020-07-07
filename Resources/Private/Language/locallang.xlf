@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="hellotypo3" date="2018-08-30T10:11:30+02:00">
+		<header/>
+		<body>
+
+			<!--
+            ===============
+            -> L...
+            ===============
+            -->
+			<trans-unit id="language.de">
+				<source>Deutsch</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

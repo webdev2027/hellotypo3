@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<ul id="languageMenu" class="dropdown menu" data-dropdown-menu data-close-on-click-inside="false">
+
+    <f:if condition="{v:page.language()}==0">
+        <li class="de">
+            <f:link.page pageUid="{page.uid}" additionalParams="{L:0}">
+                <f:image src="EXT:hellotypo3/Resources/Public/Icons/Flags/de.svg" width="18" height="14"
+                         alt="{f:translate(key: 'LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.de')}" />
+                <f:translate key="LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.de" />
+            </f:link.page>
+            <ul class="menu languageSubMenu">
+                <li class="en">
+                    <f:link.page pageUid="{page.uid}" additionalParams="{L:1}">
+                        <f:image src="EXT:hellotypo3/Resources/Public/Icons/Flags/gb.svg" width="18" height="14"
+                                 alt="{f:translate(key: 'LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.en')}" />
+                        <f:translate key="LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.en" />
+                    </f:link.page>
+                </li>
+            </ul>
+        </li>
+    </f:if>
+
+
+    <f:if condition="{v:page.language()}==1">
+        <li class="en">
+            <f:link.page pageUid="{page.uid}" additionalParams="{L:1}">
+                <f:image src="EXT:hellotypo3/Resources/Public/Icons/Flags/gb.svg" width="18" height="14"
+                         alt="{f:translate(key: 'LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.en')}" />
+                <f:translate key="LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.en" />
+            </f:link.page>
+            <ul class="menu languageSubMenu">
+                <li class="de">
+                    <f:link.page pageUid="{page.uid}" additionalParams="{L:0}">
+                        <f:image src="EXT:hellotypo3/Resources/Public/Icons/Flags/de.svg" width="18" height="14"
+                                 alt="{f:translate(key: 'LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.de')}" />
+                        <f:translate key="LLL:EXT:hellotypo3/Resources/Private/Language/locallang.xlf:language.de" />
+                    </f:link.page>
+                </li>
+            </ul>
+        </li>
+    </f:if>
+
+</ul>
+
+</html>

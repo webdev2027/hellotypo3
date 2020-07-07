@@ -1,0 +1,10 @@
+<f:if condition="{navBreadcrumb}">
+    <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+            <f:for each="{navBreadcrumb}" as="navBreadcrumbItem">
+                <f:render partial="Navigation/Elements/ItemBreadcrumb" arguments="{item: navBreadcrumbItem}"/>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</f:if>

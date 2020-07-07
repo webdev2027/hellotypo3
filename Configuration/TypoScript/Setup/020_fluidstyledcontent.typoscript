@@ -1,0 +1,25 @@
+lib.contentElement {
+
+    templateRootPaths {
+        100 = EXT:hellotypo3/Resources/Private/Extensions/Fluidstyledcontent/Templates/
+    }
+    partialRootPaths {
+        100 = EXT:hellotypo3/Resources/Private/Extensions/Fluidstyledcontent/Partials/
+    }
+    layoutRootPaths {
+        100 = EXT:hellotypo3/Resources/Private/Extensions/Fluidstyledcontent/Layouts/
+    }
+
+
+    settings {
+        ### h2, see also constants, but can also change here
+        defaultHeaderType = {$styles.content.defaultHeaderType}
+
+        ## add fancybox 3 data attribute :  http://fancyapps.com/fancybox/3/
+        media {
+            popup {
+                linkParams.ATagParams.dataWrap = data-fancybox="gallery" class="{$styles.content.textmedia.linkWrap.lightboxCssClass}" rel="{$styles.content.textmedia.linkWrap.lightboxRelAttribute}"
+            }
+        }
+    }
+}

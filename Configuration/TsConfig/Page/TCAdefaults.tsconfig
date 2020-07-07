@@ -1,0 +1,17 @@
+#################
+#### TCAdefaults
+#### https://docs.typo3.org/m/typo3/reference-tsconfig/10.4/en-us/UserTsconfig/TcaDefaults.html#usertstcadefaults
+#################
+TCAdefaults {
+
+	tt_content {
+
+		### oben links
+		imageorient    = 2
+
+		### anzahl der spalten
+		imagecols      = 1
+
+	}
+
+} ### TCAdefaults

@@ -1,0 +1,13 @@
+#################
+#### TX_NEWS ####
+#################
+
+tx_news {
+
+	templateLayouts {
+	    100 = LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:tx_news.template.100
+	    101 = LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:tx_news.template.101
+	}
+
+	predefine.archive = +60 days
+}

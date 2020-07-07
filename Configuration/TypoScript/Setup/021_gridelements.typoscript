@@ -1,0 +1,42 @@
+tt_content.gridelements_pi1 =< lib.contentElement
+tt_content.gridelements_pi1 {
+    templateName = Generic
+    variables {
+        content =< tt_content.gridelements_view
+    }
+}
+
+tt_content {
+    gridelements_pi1 = COA
+    gridelements_pi1 {
+        20 {
+            10 {
+                setup {
+                    GridTwoColumns < lib.gridelements.defaultGridSetup
+                    GridTwoColumns {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = {$extensionsRoot}Gridelements/GridTwoColumns.html
+                        }
+                    }
+                    GridThreeColumns < lib.gridelements.defaultGridSetup
+                    GridThreeColumns {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = {$extensionsRoot}Gridelements/GridThreeColumns.html
+                        }
+                    }
+                    GridFiveColumns < lib.gridelements.defaultGridSetup
+                    GridFiveColumns {
+                        cObject = FLUIDTEMPLATE
+                        cObject {
+                            file = {$extensionsRoot}Gridelements/GridFiveColumns.html
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_view < tt_content.gridelements_pi1

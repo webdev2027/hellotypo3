@@ -1,0 +1,29 @@
+################################
+#### BACKENDLAYOUT: DEFAULT ####
+################################
+mod {
+  web_layout {
+    BackendLayouts {
+      default {
+        title = LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:backend_layout.homepage.title
+        config {
+          backend_layout {
+            colCount = 1
+            rowCount = 1
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:backend_layout.homepage.1
+                    colPos = 101
+                  }
+                }
+              }
+            }
+          }
+        }
+        #icon = EXT:hellotypo3/Resources/Public/Icons/be_layout_default.gif
+      }
+    }
+  }
+}

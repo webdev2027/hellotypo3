@@ -1,0 +1,18 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = hellotypo3
+    }
+
+    /*
+    config {
+        tt_content.bodytext {
+            preset = default
+            types.text.preset = minimal
+        }
+        tx_news_domain_model_news.bodytext.preset = custom_news
+    }
+    */
+}

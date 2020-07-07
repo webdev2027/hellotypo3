@@ -1,0 +1,133 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+    <f:render partial="PartialHeader" />
+
+    <div id="main">
+
+        <div id="stage" class="grid-container full stage hide-for-small-only stage-subpage">
+            <div class="grid-container">
+                <div class="grid-x">
+
+                    <div class="small-12 cell">
+                        <f:if condition="{101}">
+                            <f:then>
+                                <f:format.html parseFuncTSPath="">{101}</f:format.html>
+                            </f:then>
+                            <f:else>
+                                <f:image src="EXT:hellotypo3/Resources/Public/img/banner_fallback.jpg" alt="POTEMA Banner" />
+                            </f:else>
+                        </f:if>
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- / #stage -->
+
+        <div class="hide-for-small-only">
+            <f:render partial="PartialBreadcrumb" />
+        </div>
+
+        <div id="headline" class="grid-container full bgWhite">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="medium-12 cell isRelative" style="min-height:60px;">
+                        <f:if condition="{100}">
+                            <f:then>
+                                <f:format.html parseFuncTSPath="">{100}</f:format.html>
+                            </f:then>
+                            <f:else>
+                                <div class="wrapHeader1"><h1>{data.title}</h1></div>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="content" class="grid-container full bgWhite">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="medium-12 cell">
+                        <f:format.html parseFuncTSPath="">{102}</f:format.html>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container full bgWhite">
+            <div class="grid-container">
+                <div class="grid-x">
+
+                    <div class="large-12 cell">
+
+                        <p id="scrollTop" class="text-right noMargin">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </p>
+
+                    </div>
+
+                </div><!-- / grid-x -->
+
+            </div>
+            <div class="primaryLine"></div>
+        </div>
+
+        <footer>
+
+            <div class="grid-container full bgDarkgray">
+                <div class="grid-container">
+                    <div class="grid-x paddingTop paddingBottom">
+
+                        <div class="large-12 cell">
+
+                            <f:cObject typoscriptObjectPath="lib.navFooter" />
+
+                        </div>
+                    </div>
+
+                    <div class="grid-x" data-equalizer="sitemap">
+
+                        <f:cObject typoscriptObjectPath="lib.navSitemap" />
+
+                        <div class="medium-4 large-3 cell large-offset-1">
+                            <div class="addressFooter">
+                                <h4><span>POTEMA GmbH</span></h4>
+                                <p>
+                                    Schützenstraße 5<br>
+                                    98527 Suhl
+                                </p>
+                                <p>
+                                    Telefon: +49 3681 45502-0<!--<br>
+                                    Fax: +49 3681 45502-19-->
+                                </p>
+                                <p>
+                                    E-Mail: <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#112;&#111;&#116;&#101;&#109;&#97;&#46;&#100;&#101;">&#105;&#110;&#102;&#111;&#64;&#112;&#111;&#116;&#101;&#109;&#97;&#46;&#100;&#101;</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="grid-container">
+                    <div class="grid-x paddingBottom">
+                        <div class="large-12 cell isRelative">
+
+                            <ul id="navCopyright" class="menu simple">
+                                <f:cObject typoscriptObjectPath="lib.footerInfo" />
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer><!-- / footer -->
+
+    </div><!-- / main -->
+
+</f:section>

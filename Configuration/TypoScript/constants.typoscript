@@ -1,0 +1,101 @@
+### fluid styled content
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+### typoscript main template constants
+styles.content {
+    defaultHeaderType = 2
+    allowTags:= addToList(iframe)
+
+    textmedia {
+        maxW = 1200
+        maxWInText = 500
+        columnSpacing = 16
+        rowSpacing = 32
+        textMargin = 16
+        borderWidth = 8
+        borderPadding = 4
+
+        image{
+            small = 480
+            medium = 960
+            large = 1280
+        }
+
+        borderColor = #000
+        borderWidth = 1
+        borderPadding = 0
+
+        linkWrap {
+            width = 1200m
+            height = 1200
+            newWindow = 0
+            lightboxEnabled = 1
+            lightboxCssClass = lightbox
+            lightboxDataAttribute = lb-{current}
+        }
+    }
+
+    links {
+        target =
+        extTarget = _blank
+        keep = path
+    }
+}
+
+
+### own variables
+myTemplateRootPath      = EXT:hellotypo3/Resources/Private/Templates/
+myPartialRootPath       = EXT:hellotypo3/Resources/Private/Partials/
+myLayoutRootPath        = EXT:hellotypo3/Resources/Private/Layouts/
+
+### third party extension path
+extensionsRoot          = EXT:hellotypo3/Resources/Private/Extensions/
+
+### publicPathExt
+publicPathExt           = EXT:hellotypo3/Resources/Public/
+
+### publicPath StyleSheets
+publicPathStyleSheets   = EXT:hellotypo3/Resources/Public/css/
+
+### publicPath JavaScript
+publicPathJavaScript    = EXT:hellotypo3/Resources/Public/js/
+
+### publicPath Images
+publicPathImages        = EXT:hellotypo3/Resources/Public/images/
+
+### publicPath Fonts
+publicPathFonts         = EXT:hellotypo3/Resources/Public/fonts/
+
+
+
+### edit constants via backend
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.rootPage
+rootPage = 1
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.defaultDescription
+defaultDescription =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.doNotShowInMainMenu
+doNotShowInMainMenu =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.navFooter
+navFooter =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.navMeta
+navMeta =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.sitemapOne
+sitemapOne =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.sitemapTwo
+sitemapTwo =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.sitemapThree
+sitemapThree =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.sitemapFour
+sitemapFour =
+
+# cat=HELLOCODE/settings; type=string; label=LLL:EXT:hellotypo3/Resources/Private/Language/backend.xlf:constants.sitelanguages
+siteLanguages = 0,1
