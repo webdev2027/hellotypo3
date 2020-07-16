@@ -1,2 +1,2 @@
 # hellotypo3
-TYPO3 Distribution
+My personal TYPO3-Starter-Distribution for all customer projects
