@@ -10,6 +10,15 @@
 #  * author         ssa :: hello@hellocode.de
 #  *
 #  * ========================================================================== */
+
+lib.backendLayout = TEXT
+lib.backendLayout {
+    data = pagelayout
+    split {
+        token = pagets__
+    }
+}
+
 page = PAGE
 page {
     typeNum = 0
